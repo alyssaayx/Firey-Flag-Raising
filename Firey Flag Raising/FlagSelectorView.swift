@@ -18,14 +18,33 @@ struct FlagSelectorView: View {
         return try! decoder.decode([Flag].self, from: data)
     }
     
+    @Binding var selectedFlag: Flag 
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
+                    
+                    
+                    
+                    ForEach(flags) { flag in
+                        VStack {
+                            Text(flag.emoji)
+                                .font(.system(size: 50))
+                            Text(flag.description)
+                                .font(.caption)
+                                .multilineTextAlignment(.center)
+                        }
+                    }
+                }
+                .navigationTitle("Flag Selector")
+            }
+        }
     }
-}
-
-struct FlagSelectorView_Previews: PreviewProvider {
-    static var previews: some View {
-        FlagSelectorView()
+    
+    struct FlagSelectorView_Previews: PreviewProvider {
+        static var previews: some View {
+            FlagSelectorView()
+        }
     }
 }

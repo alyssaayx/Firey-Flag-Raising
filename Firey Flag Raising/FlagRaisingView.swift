@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FlagRaisingView: View {
     
-    @State var offset: CGFloat = 20
+    @AppStorage("flagOffset") var offset: Double = 20
     
     var body: some View {
         VStack {
@@ -20,7 +20,7 @@ struct FlagRaisingView: View {
                 
                 Text("🇸🇬")
                     .font(.system(size: 100))
-                    .offset(x: 0, y: offset)
+                    .offset(x: 0, y: CGFloat(offset))
             }
         
         Button("Raise Flag") {

@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            FlagRaisingView()
+                .tabItem {
+                    Label("Flag Raising", systemImage: "arrow.up")
+                }
+            FlagSelectorView()
+                .tabItem {
+                    Label("Flag Selector", systemImage: "flag.badge.ellipsis")
+                }
+        }
     }
 }
 

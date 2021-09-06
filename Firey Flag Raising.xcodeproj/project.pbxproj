@@ -13,6 +13,7 @@
 		99EC31EC26E5B01900A65FC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EC31EB26E5B01900A65FC9 /* Preview Assets.xcassets */; };
 		99EC31F426E5B04000A65FC9 /* FlagRaisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC31F326E5B04000A65FC9 /* FlagRaisingView.swift */; };
 		99EC31F626E5B05000A65FC9 /* FlagSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC31F526E5B05000A65FC9 /* FlagSelectorView.swift */; };
+		99EC31F826E5B71D00A65FC9 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC31F726E5B71D00A65FC9 /* Flag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		99EC31ED26E5B01900A65FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EC31F326E5B04000A65FC9 /* FlagRaisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagRaisingView.swift; sourceTree = "<group>"; };
 		99EC31F526E5B05000A65FC9 /* FlagSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSelectorView.swift; sourceTree = "<group>"; };
+		99EC31F726E5B71D00A65FC9 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				99EC31E426E5B01400A65FC9 /* Firey_Flag_RaisingApp.swift */,
 				99EC31E626E5B01400A65FC9 /* ContentView.swift */,
 				99EC31F326E5B04000A65FC9 /* FlagRaisingView.swift */,
+				99EC31F726E5B71D00A65FC9 /* Flag.swift */,
 				99EC31F526E5B05000A65FC9 /* FlagSelectorView.swift */,
 				99EC31E826E5B01900A65FC9 /* Assets.xcassets */,
 				99EC31ED26E5B01900A65FC9 /* Info.plist */,
@@ -146,6 +149,7 @@
 			files = (
 				99EC31E726E5B01400A65FC9 /* ContentView.swift in Sources */,
 				99EC31E526E5B01400A65FC9 /* Firey_Flag_RaisingApp.swift in Sources */,
+				99EC31F826E5B71D00A65FC9 /* Flag.swift in Sources */,
 				99EC31F426E5B04000A65FC9 /* FlagRaisingView.swift in Sources */,
 				99EC31F626E5B05000A65FC9 /* FlagSelectorView.swift in Sources */,
 			);

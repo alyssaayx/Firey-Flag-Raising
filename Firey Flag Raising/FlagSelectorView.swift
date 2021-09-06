@@ -35,6 +35,13 @@ struct FlagSelectorView: View {
                                 .font(.caption)
                                 .multilineTextAlignment(.center)
                         }
+                        .padding()
+                        .background(flag == selectedFlag ? Color.blue : Color.clear)
+                        .foregroundColor(flag == selectedFlag ? .white : .black)
+                        .cornerRadius(8)
+                        .onTapGesture {
+                            selectedFlag = flag
+                        }
                     }
                 }
                 .navigationTitle("Flag Selector")
@@ -44,7 +51,7 @@ struct FlagSelectorView: View {
     
     struct FlagSelectorView_Previews: PreviewProvider {
         static var previews: some View {
-            FlagSelectorView()
+            FlagSelectorView(selectedFlag: .constant(Flag(emoji: "🇸🇬", description: "Singapore")))
         }
     }
 }

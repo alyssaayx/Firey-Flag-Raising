@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            FlagRaisingView()
+            FlagRaisingView(flag: $flag)
                 .tabItem {
                     Label("Flag Raising", systemImage: "arrow.up")
                 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		99EC31F626E5B05000A65FC9 /* FlagSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC31F526E5B05000A65FC9 /* FlagSelectorView.swift */; };
 		99EC31F826E5B71D00A65FC9 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC31F726E5B71D00A65FC9 /* Flag.swift */; };
 		99EC31FA26E5B9D400A65FC9 /* FlagData.json in Resources */ = {isa = PBXBuildFile; fileRef = 99EC31F926E5B9D400A65FC9 /* FlagData.json */; };
+		99EC31FD26E70CCB00A65FC9 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 99EC31FC26E70CCB00A65FC9 /* FirebaseDatabaseSwift-Beta */; };
+		99EC31FF26E70DC100A65FC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99EC31FE26E70DC100A65FC9 /* GoogleService-Info.plist */; };
+		99EC320126E70E4E00A65FC9 /* FlagDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC320026E70E4E00A65FC9 /* FlagDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,8 @@
 		99EC31F526E5B05000A65FC9 /* FlagSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSelectorView.swift; sourceTree = "<group>"; };
 		99EC31F726E5B71D00A65FC9 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		99EC31F926E5B9D400A65FC9 /* FlagData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FlagData.json; sourceTree = "<group>"; };
+		99EC31FE26E70DC100A65FC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99EC320026E70E4E00A65FC9 /* FlagDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EC31FD26E70CCB00A65FC9 /* FirebaseDatabaseSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +66,10 @@
 		99EC31E326E5B01400A65FC9 /* Firey Flag Raising */ = {
 			isa = PBXGroup;
 			children = (
+				99EC31FE26E70DC100A65FC9 /* GoogleService-Info.plist */,
 				99EC31F926E5B9D400A65FC9 /* FlagData.json */,
 				99EC31E426E5B01400A65FC9 /* Firey_Flag_RaisingApp.swift */,
+				99EC320026E70E4E00A65FC9 /* FlagDataManager.swift */,
 				99EC31E626E5B01400A65FC9 /* ContentView.swift */,
 				99EC31F326E5B04000A65FC9 /* FlagRaisingView.swift */,
 				99EC31F726E5B71D00A65FC9 /* Flag.swift */,
@@ -97,6 +105,9 @@
 			dependencies = (
 			);
 			name = "Firey Flag Raising";
+			packageProductDependencies = (
+				99EC31FC26E70CCB00A65FC9 /* FirebaseDatabaseSwift-Beta */,
+			);
 			productName = "Firey Flag Raising";
 			productReference = 99EC31E126E5B01400A65FC9 /* Firey Flag Raising.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 99EC31D826E5B01400A65FC9;
+			packageReferences = (
+				99EC31FB26E70CCB00A65FC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 99EC31E226E5B01400A65FC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EC31EC26E5B01900A65FC9 /* Preview Assets.xcassets in Resources */,
+				99EC31FF26E70DC100A65FC9 /* GoogleService-Info.plist in Resources */,
 				99EC31FA26E5B9D400A65FC9 /* FlagData.json in Resources */,
 				99EC31E926E5B01900A65FC9 /* Assets.xcassets in Resources */,
 			);
@@ -152,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EC31E726E5B01400A65FC9 /* ContentView.swift in Sources */,
+				99EC320126E70E4E00A65FC9 /* FlagDataManager.swift in Sources */,
 				99EC31E526E5B01400A65FC9 /* Firey_Flag_RaisingApp.swift in Sources */,
 				99EC31F826E5B71D00A65FC9 /* Flag.swift in Sources */,
 				99EC31F426E5B04000A65FC9 /* FlagRaisingView.swift in Sources */,
@@ -342,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99EC31FB26E70CCB00A65FC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99EC31FC26E70CCB00A65FC9 /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99EC31FB26E70CCB00A65FC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 99EC31D926E5B01400A65FC9 /* Project object */;
 }

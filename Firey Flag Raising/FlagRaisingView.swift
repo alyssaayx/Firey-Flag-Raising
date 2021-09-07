@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FlagRaisingView: View {
     
-    @AppStorage("flagOffset") var offset: Double = 20
+    @Binding var offset: Double
     @Binding var flag: Flag
     
     var body: some View {
@@ -39,6 +39,6 @@ struct FlagRaisingView: View {
 
 struct FlagRaisingView_Previews: PreviewProvider {
     static var previews: some View {
-        FlagRaisingView(flag: .constant(Flag(emoji: "🇸🇬", description: "Singapore")))
+        FlagRaisingView(offset: .constant(20), flag: .constant(Flag(emoji: "🇸🇬", description: "Singapore")))
     }
 }

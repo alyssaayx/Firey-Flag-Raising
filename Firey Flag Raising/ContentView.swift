@@ -23,6 +23,12 @@ struct ContentView: View {
                 }
             
         }
+        .onChange(of: flagDataManager.flag) { _ in
+            flagDataManager.saveFlag()
+        }
+        .onChange(of: flagDataManager.flagOffset) { _ in
+            flagDataManager.saveFlagOffset()
+        }
     }
 }
 

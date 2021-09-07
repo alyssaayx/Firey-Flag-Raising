@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Flag: Identifiable, Decodable, Equatable {
+struct Flag: Identifiable, Codable, Equatable {
     
     var id: String { emoji }
     
